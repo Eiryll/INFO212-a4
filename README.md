@@ -21,6 +21,17 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
+## Setup database
+
+The project expects a database with the following configuration:
+
+Database name: neo4j
+Database username: neo4j
+Database password: password1234
+
+(This needs to be setup, if you want to run the project locally)
+
+
 ## Run server
 
 python server.py
