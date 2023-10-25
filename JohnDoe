@@ -1,2 +1,0 @@
-CREATE (p:Person {name: 'John Doe'})
-RETURN p
