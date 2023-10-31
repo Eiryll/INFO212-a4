@@ -19,8 +19,12 @@ def get_node(data):
     """Returns a single node in the dataset. For when there is only a single record out."""
     return data[0][0][0]
 
+
 def get_nodes(data):
     """Returns an iterable (multiple) of the innermost nodes in the dataset"""
     return map(lambda r: r[0], data[0])
 
 
+def node_to_json(node):
+    node_properties = dict(node.items())
+    return node_properties
