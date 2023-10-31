@@ -2,7 +2,6 @@
 
 Lab a4 project for Info212.
 
-
 ## Create virtualenv
 
 ```powershell
@@ -31,7 +30,14 @@ Database password: password1234
 
 (This needs to be setup, if you want to run the project locally)
 
-
 ## Run server
 
 python server.py
+
+## Run seeding
+
+In order to seed the database (create some cars etc.), run:
+
+```
+python seed.py
+```
