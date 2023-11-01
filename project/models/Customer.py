@@ -23,12 +23,12 @@ def find_customer_by_id(id):
     else:
         return None
 
+
 def delete_customer_by_id(id):
     _get_connection().execute_query("MATCH (a:Customer) where a.id = $id DELETE a", id=id)
 
 
-
-def create_customer(body):
+def _create_customer(body):
     # Create customer
     _get_connection().execute_query("CREATE (a:Customer {id:$id, name:$name, age:$age, address:$address})",
                                     id=body["id"],
@@ -38,16 +38,13 @@ def create_customer(body):
                                     )
 
 
-
 def update_customer(id, body):
-
     # Update customer
 
     _get_connection().execute_query("MATCH (a: Customer) where a.id = $id SET a.name = $name RETURN a",
                                     id=id,
                                     name=body["name"]
                                     )
-
 
 
 class Customer:

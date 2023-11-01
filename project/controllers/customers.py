@@ -1,6 +1,6 @@
 from project import app
-from project.models.Customer import find_customer_by_id, find_all_customers, create_customer, delete_customer_by_id, \
-    update_customer
+from project.models.Customer import find_customer_by_id, find_all_customers, delete_customer_by_id, \
+    update_customer, _create_customer
 from flask import request
 
 
@@ -17,7 +17,7 @@ def get_customers():
 def create_customer():
     body = request.get_json()
 
-    create_customer(body)
+    _create_customer(body)
 
     return {}
 
